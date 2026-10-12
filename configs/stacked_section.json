@@ -1,0 +1,26 @@
+{
+  "_comment": "Stacked section (paper Figs. 17-18), 4 ms sampling. Ormsby low-cut 0-5 Hz with a 5-7.5 Hz taper (the original script's 0-10/15 Hz at an assumed 2 ms). GARCH(2,2) as in the original script.",
+  "dataset": "stacked_section",
+  "filter": {
+    "type": "ormsby",
+    "corners": [0, 0, 5, 7.5],
+    "mode": "bandstop"
+  },
+  "garch": {
+    "p": 2,
+    "q": 2
+  },
+  "features": {
+    "wavelengths": [3, 6, 12, 24, 48, 96],
+    "orientations": [0, 45, 90, 135],
+    "smoothing": 1.5,
+    "scaling": "clip",
+    "coordinates": true
+  },
+  "clustering": {
+    "n_clusters": 5,
+    "n_init": 10,
+    "seed": 0,
+    "selection": "gap"
+  }
+}

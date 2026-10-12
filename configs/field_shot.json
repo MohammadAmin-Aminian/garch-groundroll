@@ -1,0 +1,24 @@
+{
+  "_comment": "Field shot gather (paper Figs. 13-16). f-k filter = the reject zone used in the paper (stored in the data file).",
+  "dataset": "field_shot",
+  "filter": {
+    "type": "fk_mask"
+  },
+  "garch": {
+    "p": 1,
+    "q": 1
+  },
+  "features": {
+    "wavelengths": [3, 6, 12, 24],
+    "orientations": [0, 30, 60, 90, 120, 150],
+    "smoothing": 1.5,
+    "scaling": "clip",
+    "coordinates": true
+  },
+  "clustering": {
+    "n_clusters": 4,
+    "n_init": 10,
+    "seed": 0,
+    "selection": "gap"
+  }
+}

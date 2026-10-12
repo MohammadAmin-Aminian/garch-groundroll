@@ -1,0 +1,26 @@
+{
+  "_comment": "Analytic synthetic (5 reflections + dispersive ground roll); clean signal known. Ormsby low-cut removes the ground-roll band and part of the reflection spectrum.",
+  "dataset": "synthetic",
+  "filter": {
+    "type": "ormsby",
+    "corners": [0, 0, 15, 25],
+    "mode": "bandstop"
+  },
+  "garch": {
+    "p": 1,
+    "q": 1
+  },
+  "features": {
+    "wavelengths": [3, 6, 12, 24],
+    "orientations": [0, 45, 90, 135],
+    "smoothing": 1.5,
+    "scaling": "clip",
+    "coordinates": true
+  },
+  "clustering": {
+    "n_clusters": 5,
+    "n_init": 10,
+    "seed": 0,
+    "selection": "gap"
+  }
+}

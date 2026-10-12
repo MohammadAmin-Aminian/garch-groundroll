@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "garch-groundroll"
+version = "1.0.0"
+description = "Recover reflection signals lost during ground-roll attenuation by clustering the GARCH conditional standard deviation of the removed noise."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+  {name = "Mohammad Amin Aminian"},
+  {name = "Mohammad Ali Riahi"},
+]
+keywords = ["seismic", "ground roll", "GARCH", "noise attenuation", "clustering", "geophysics"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering :: Physics",
+  "Intended Audience :: Science/Research",
+]
+dependencies = [
+  "numpy>=1.22",
+  "scipy>=1.8",
+  "scikit-learn>=1.1",
+  "matplotlib>=3.5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+garch-groundroll = "garch_groundroll.cli:main"
+
+[project.urls]
+Paper = "https://doi.org/10.1080/08123985.2022.2135430"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,29 @@
+{
+  "_comment": "Cross-line of a 3-D survey (paper Figs. 19-20). f-k fan filter. Weak shallow ground roll (chevrons, 600-1200 ms) has only a moderate CSD, so only the lowest-CSD cluster is restored (see README, Limitations).",
+  "dataset": "crossline_3d",
+  "filter": {
+    "type": "fk_fan",
+    "v_reject": 400,
+    "v_pass": 700,
+    "f_max": 12,
+    "f_taper": 6
+  },
+  "garch": {
+    "p": 1,
+    "q": 1
+  },
+  "features": {
+    "wavelengths": [3, 6, 12, 24, 48],
+    "orientations": [0, 45, 90, 135],
+    "smoothing": 1.5,
+    "scaling": "clip",
+    "coordinates": false
+  },
+  "clustering": {
+    "n_clusters": 5,
+    "n_init": 10,
+    "seed": 0,
+    "selection": "n_keep",
+    "n_keep": 1
+  }
+}

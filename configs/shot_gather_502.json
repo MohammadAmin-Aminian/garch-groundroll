@@ -1,0 +1,24 @@
+{
+  "_comment": "Symmetric shot gather (paper Figs. 3-12). f-k filter = the reject zone used in the paper (stored in the data file).",
+  "dataset": "shot_gather_502",
+  "filter": {
+    "type": "fk_mask"
+  },
+  "garch": {
+    "p": 1,
+    "q": 1
+  },
+  "features": {
+    "wavelengths": [3, 6, 12],
+    "orientations": [-30, -20, -10, 0, 10, 20, 30],
+    "smoothing": 1.5,
+    "scaling": "clip",
+    "coordinates": true
+  },
+  "clustering": {
+    "n_clusters": 5,
+    "n_init": 10,
+    "seed": 0,
+    "selection": "gap"
+  }
+}
