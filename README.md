@@ -1,6 +1,6 @@
 # GARCH ground-roll signal recovery
 
-[![tests](https://github.com/OWNER/REPO/actions/workflows/tests.yml/badge.svg)](https://github.com/OWNER/REPO/actions/workflows/tests.yml)
+[![tests](https://github.com/MohammadAmin-Aminian/garch-groundroll/actions/workflows/tests.yml/badge.svg)](https://github.com/MohammadAmin-Aminian/garch-groundroll/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Paper DOI](https://img.shields.io/badge/DOI-10.1080%2F08123985.2022.2135430-informational)](https://doi.org/10.1080/08123985.2022.2135430)
 
@@ -126,8 +126,8 @@ BIC GARCH(3,1), GARCH(2,1) and GARCH(1,1) win on 48 %, 36 % and 16 % of the trac
 **Requirements:** Python ≥ 3.9 with NumPy, SciPy, scikit-learn and Matplotlib.
 
 ```bash
-git clone https://github.com/OWNER/REPO.git
-cd REPO
+git clone https://github.com/MohammadAmin-Aminian/garch-groundroll.git
+cd garch-groundroll
 python -m pip install -e .          # or: pip install -r requirements.txt
 ```
 
@@ -198,11 +198,11 @@ pytest
 Gabor filtering, k-means and all filters are implemented in base MATLAB.
 
 ```matlab
-cd REPO/matlab
+cd garch-groundroll/matlab
 setup                        % adds matlab/src to the path
 cd examples
 quickstart                   % synthetic example
-reproduce_paper              % all experiments -> REPO/results/matlab
+reproduce_paper              % all experiments -> garch-groundroll/results/matlab
 cd ../tests
 run_tests                    % unit tests
 ```

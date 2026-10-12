@@ -4,6 +4,7 @@ title: "garch-groundroll: recovery of signal lost during ground-roll attenuation
 type: software
 version: 1.0.0
 license: MIT
+repository-code: "https://github.com/MohammadAmin-Aminian/garch-groundroll"
 authors:
   - family-names: Aminian
     given-names: Mohammad Amin
